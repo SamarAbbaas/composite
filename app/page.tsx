@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,10 +7,8 @@ import ArrowDownIcon from "@iconify-react/mdi-light/arrow-down";
 import ExpandIcon from "@iconify-react/iconoir/expand";
 import DeleteOutlinedIcon from "@iconify-react/weui/delete-outlined";
 // import "@fontsource/the-silver-editorial/400.css";
- 
+import { Figtree } from "next/font/google";
 
-
- 
 interface ImageItem {
   id: string;
   src: string;
@@ -20,7 +18,6 @@ interface ImageItem {
   height: number;
 }
 
- 
 const imagesData: ImageItem[] = [
   {
     id: "img-1",
@@ -80,7 +77,6 @@ const imagesData: ImageItem[] = [
   },
 ];
 
- 
 const IconOfBox = () => {
   return (
     <>
@@ -100,11 +96,10 @@ const IconOfBox = () => {
   );
 };
 
- 
 export default function PageComponent() {
   return (
     <>
-      {/*    first Section */}
+      {/*     first Section */}
       <div className="relative min-h-screen bg-background max-w-screen overflow-hidden">
         {/* Grid Background */}
         <div
@@ -240,30 +235,142 @@ export default function PageComponent() {
       {/* Bottom Info Section */}
       <div className="relative flex items-center justify-between gap-8 top-8 left-5 w-full h-80 p-20">
         <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
-          <div className="  max-w-fit bg-[#FFFFFF] p-4 fontSilver text-3xl text-primary">
-             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
-        <AddIcon height="0.5em" />
-      </div>
-                <div className="absolute border border-primary/50 ml-119 -top-1.25 -right-1 bg-background text-primary">
-        <DeleteOutlinedIcon height="0.5em" /></div>
-         <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -left-1.25 bg-background text-primary">
-        <ArrowDownIcon height="0.5em" />
-      </div>
-       <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -right-1.25 bg-background text-primary">
-        <ExpandIcon height="0.5em" />
-      </div>
+          <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
+            <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
+              <AddIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 ml-119 -top-1.25 -right-1 bg-background text-primary">
+              <DeleteOutlinedIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -left-1.25 bg-background text-primary">
+              <ArrowDownIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -right-1.25 bg-background text-primary">
+              <ExpandIcon height="0.5em" />
+            </div>
 
-            <h1>Color—driven discovery</h1>
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%] tracking-normal">
+              Color—driven{" "}
+              <span className="font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
+                discovery
+              </span>{" "}
+            </h1>
           </div>
-          <p className="mt-35 flex p-8 font-Inter text-primary top-70">
+          <p className="mt-15 flex p-8 font-Inter text-primary top-70">
             Discover curated images, textures and type samples based on color —
             or upload your own starter image.
           </p>
         </div>
-        <div className="mb-8 h-80 w-100 border border-primary/50" >content 2  </div>
-        <div className="mb-8 h-80 w-100 border border-primary/50" >Content 3 </div>
+
+        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
+          <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
+            <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
+              <AddIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 ml-119 -top-1.25 -right-1 bg-background text-primary">
+              <DeleteOutlinedIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -left-1.25 bg-background text-primary">
+              <ArrowDownIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -right-1.25 bg-background text-primary">
+              <ExpandIcon height="0.5em" />
+            </div>
+
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%]  tracking-normal">
+              Quickly
+              <br />{" "}
+              <span className=" font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
+                shape
+              </span>{" "}
+              your compositions
+            </h1>
+          </div>
+          <p className="mt-5 flex p-8 font-Inter text-primary top-60">
+            Zoom, pan and snap your way around an intuitive canvas that allows
+            you to drag, scale, and arrange elements quickly.
+          </p>
+        </div>
+
+        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
+          <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
+            <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
+              <AddIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 ml-119 -top-1.25 -right-1 bg-background text-primary">
+              <DeleteOutlinedIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -left-1.25 bg-background text-primary">
+              <ArrowDownIcon height="0.5em" />
+            </div>
+            <div className="absolute border border-primary/50 p-px mt-119 -bottom-1.25 -right-1.25 bg-background text-primary">
+              <ExpandIcon height="0.5em" />
+            </div>
+
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%]  tracking-normal">
+              Make it a<br /> part of your{" "}
+              <span className=" font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
+                workflow
+              </span>{" "}
+            </h1>
+          </div>
+          <p className="mt-5 flex p-8 font-Inter text-primary top-60">
+            Export boards as either static PNGs and JPEGs or as layered SVGs for
+            easy incorporation into Figma and other platforms.
+          </p>
+        </div>
       </div>
-     
+
+      {/* Get started Section */}
+      <div>
+        <h1 className="flex justify-center items-center mt-18 font-silver italic tracking-normal text-[60px] text-primary">
+          Get started
+        </h1>
+        <div className="flex justify-between items-center gap-4  m-28 p-4">
+          <div className="relative bg-[#C5C5C526] w-136  h-115 text-black p-8 font-normal not-italic text-[20px] leading-[58px] tracking-[-0.03em]">
+       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">01</span>     Create up to 8 projects</ol>
+       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">02</span>     Core tools and functionality</ol>
+       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">03</span>     Static JPEG or PNG export</ol>
+             <div className="font-silver text-[90px] italic tracking-normal text-black mt-38">
+Free
+         </div>
+         <div className="absolute top-92 right-2  flex flex-col">
+          <button className="absoulte  hover:bg-white rounded-full  transition-colors duration-300 ease-in-out ">
+            <Link href="#" className="p-9 pt-2 pb-2 text-lg right-2  rounded-full text-black">
+              Sign up{" "}
+            </Link>
+          </button>
+          <h6 className="mb-6 text-black">No credits card required</h6>
+</div>
+          </div>
+          <div>Paid</div>
+        </div>
+      </div>
+      {/* Fotoor */}
+      <div className="relative top-8 left-5 w-full h-80 p-20 bg-black flex items-center justify-center">
+        <Image
+          src="/Footer.png"
+          alt="Footer"
+          width={1314}
+          height={276}
+          className="pb-6  "
+        />
+        <div className="absolute bottom-5 left-20 flex items-center gap-4 text-muted-foreground text-sm">
+          <Link href="#" className="">
+            {" "}
+            Terms of Use
+          </Link>
+          <Link href="#" className="">
+            {" "}
+            Privacy Policy
+          </Link>
+        </div>
+        <div>
+          <div className="absolute bottom-5 right-20 text-muted-foreground text-sm">
+            Copyright © Ward Studio Ltd 2025
+          </div>
+        </div>
+      </div>
     </>
   );
 }
