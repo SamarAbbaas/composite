@@ -6,8 +6,8 @@ import AddIcon from "@iconify-react/material-symbols-light/add";
 import ArrowDownIcon from "@iconify-react/mdi-light/arrow-down";
 import ExpandIcon from "@iconify-react/iconoir/expand";
 import DeleteOutlinedIcon from "@iconify-react/weui/delete-outlined";
-import "@fontsource/the-silver-editorial/400.css";
-const fontSilver = "var(--font-silver)";
+// import "@fontsource/the-silver-editorial/400.css";
+ 
 
 
  
