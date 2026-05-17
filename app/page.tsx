@@ -151,13 +151,13 @@ export default function PageComponent() {
             <div className="flex items-center justify-center gap-4">
               <Link
                 href="#"
-                className="p-9 pt-2 pb-2 text-lg bg-primary rounded-full text-[#FFFFFF]"
+                className="p-9 font-ibm-plex pt-2 pb-2 text-lg bg-primary rounded-full text-[#FFFFFF]"
               >
                 sign up{" "}
               </Link>
               <Link
                 href="#"
-                className="p-9 pt-2 pb-2 text-lg bg-[#B7B7B7] rounded-full text-[#FFFFFF]"
+                className="p-9 pt-2 font-ibm-plex pb-2 text-lg bg-[#B7B7B7] rounded-full text-[#FFFFFF]"
               >
                 Log in{" "}
               </Link>
@@ -167,7 +167,7 @@ export default function PageComponent() {
       </div>
 
       {/* Features Section */}
-      <div className="relative max-w-screen w-full h-200">
+      <div className="relative max-w-screen w-full h-200 md:block md:relative md:w-full md:h-125">
         <Image
           src="/keyFeature.png"
           alt="Footer"
@@ -233,8 +233,8 @@ export default function PageComponent() {
       </div>
 
       {/* Bottom Info Section */}
-      <div className="relative flex items-center justify-between gap-8 top-8  w-full h-80 p-20">
-        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
+      <div className="relative grid grid-cols-3 md-grid-col-1 items-center justify-between gap-8 top-8  w-full h-80 p-20">
+        <div className="mb-8 h-100 w-100 gap-8 border border-primary/50 relative">
           <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
               <AddIcon height="0.5em" />
@@ -249,20 +249,20 @@ export default function PageComponent() {
               <ExpandIcon height="0.5em" />
             </div>
 
-            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%] tracking-normal">
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-sung tracking-normal">
               Color—driven{" "}
               <span className="font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
                 discovery
               </span>{" "}
             </h1>
           </div>
-          <p className="mt-15 flex p-8 font-Inter text-primary top-70">
+          <p className="mt-30 flex p-8 font-Inter text-primary top-100">
             Discover curated images, textures and type samples based on color —
             or upload your own starter image.
           </p>
         </div>
 
-        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative leading-2">
+        <div className="mb-8 h-100 w-100 gap-8 border border-primary/50 relative leading-2">
           <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
               <AddIcon height="0.5em" />
@@ -277,22 +277,22 @@ export default function PageComponent() {
               <ExpandIcon height="0.5em" />
             </div>
 
-            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%]  tracking-normal">
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-snug  tracking-normal">
               Quickly
               <br />{" "}
-              <span className=" font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
+              <span className=" font-silver italic font-normal tracking-normal text-[50px]   ">
                 shape
               </span>{" "}
               your compositions
             </h1>
           </div>
-          <p className="mt-5 flex p-8 font-Inter text-primary top-60">
+          <p className="mt-10 flex p-8 font-Inter text-primary top-70 leading-[100%] tracking-normal">
             Zoom, pan and snap your way around an intuitive canvas that allows
             you to drag, scale, and arrange elements quickly.
           </p>
         </div>
 
-        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
+        <div className="mb-8 h-100 w-100 gap-8 border border-primary/50 relative">
           <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
               <AddIcon height="0.5em" />
@@ -307,14 +307,14 @@ export default function PageComponent() {
               <ExpandIcon height="0.5em" />
             </div>
 
-            <h1 className="font-silver non-italic font-normal text-[50px] leading-[100%]  tracking-normal">
+            <h1 className="font-silver non-italic font-normal text-[50px] leading-sung  tracking-normal">
               Make it a<br /> part of your{" "}
               <span className=" font-silver italic font-normal tracking-normal text-[50px] leading-[100%]">
                 workflow
               </span>{" "}
             </h1>
           </div>
-          <p className="mt-5 flex p-8 font-Inter text-primary top-60">
+          <p className="mt-15 flex p-8 font-Inter text-primary top-80">
             Export boards as either static PNGs and JPEGs or as layered SVGs for
             easy incorporation into Figma and other platforms.
           </p>
@@ -323,7 +323,7 @@ export default function PageComponent() {
 
       {/* Get started Section */}
       <div>
-        <Link href="#" className="flex justify-center items-center mt-18 font-silver italic tracking-normal text-[60px] text-primary  border  border-b-primary p-6  max-w-fit m-auto">
+        <Link href="#" className="flex justify-center items-center mt-58 font-silver italic tracking-normal text-[60px] text-primary border-b border-b-primary p-6  max-w-fit m-auto">
           Get started
         </Link>
         <div className="flex justify-between items-center gap-2  m-10 p-4">
@@ -392,12 +392,18 @@ export default function PageComponent() {
               </div>
               <div className="absolute top-112 right-2  flex flex-col">
                 <button className="absoulte bg-white rounded-full   ">
-                  <Link
+                  {/* <Link
                     href="#"
                     className="p-9 pt-2 pb-2 text-lg right-2  rounded-full text-black font-ibm-plex"
                   >
                     Sign up{" "}
-                  </Link>
+                  </Link> */}
+                   <Link
+                href="#"
+                className="p-9 font-ibm-plex pt-2 pb-2 text-lg   rounded-full text-black"
+              >
+                sign up{" "}
+              </Link>
                 </button>
                 <h6 className="mb-6 font-inter">$5 / month or $35 / year</h6>
               </div>
@@ -405,12 +411,12 @@ export default function PageComponent() {
           </div>
         </div>
         <div>
-        <h1 className="flex justify-center items-center font-silver text-primary    text-3xl">View samples and tutorials on <Link href="#" className="italic gap-3 border border-b-primary/50   p-6 "> Instagram </Link> </h1>
+        <h1 className="flex justify-center items-center font-silver text-primary    text-3xl">View samples and tutorials on <Link href="#" className="italic gap-3 border-b  border-b-primary/50   p-6 "> Instagram </Link> </h1>
 
         </div>
        </div>
       {/* Fotoor */}
-      <div className="relative top-8      w-full h-full p-20  pt-4 pb-4  my-18  pl-2 pr-2 bg-black flex items-center justify-center overflow-hidden">
+      <div className="relative top-8      w-full h-80 p-20  pt-4    mt-18  pl-2 pr-2 bg-black flex items-center justify-center overflow-hidden">
         <Image
           src="/Footer.png"
           alt="Footer"
