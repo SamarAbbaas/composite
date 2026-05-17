@@ -233,7 +233,7 @@ export default function PageComponent() {
       </div>
 
       {/* Bottom Info Section */}
-      <div className="relative flex items-center justify-between gap-8 top-8 left-5 w-full h-80 p-20">
+      <div className="relative flex items-center justify-between gap-8 top-8  w-full h-80 p-20">
         <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
           <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
@@ -262,7 +262,7 @@ export default function PageComponent() {
           </p>
         </div>
 
-        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative">
+        <div className="mb-8 h-80 w-100 gap-8 border border-primary/50 relative leading-2">
           <div className="  max-w-fit bg-[#FFFFFF] p-4  text-3xl text-primary">
             <div className="absolute border border-primary/50 p-px -top-1.25 -left-1.25 bg-background text-primary">
               <AddIcon height="0.5em" />
@@ -323,39 +323,102 @@ export default function PageComponent() {
 
       {/* Get started Section */}
       <div>
-        <h1 className="flex justify-center items-center mt-18 font-silver italic tracking-normal text-[60px] text-primary">
+        <Link href="#" className="flex justify-center items-center mt-18 font-silver italic tracking-normal text-[60px] text-primary  border  border-b-primary p-6  max-w-fit m-auto">
           Get started
-        </h1>
-        <div className="flex justify-between items-center gap-4  m-28 p-4">
-          <div className="relative bg-[#C5C5C526] w-136  h-115 text-black p-8 font-normal not-italic text-[20px] leading-[58px] tracking-[-0.03em]">
-       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">01</span>     Create up to 8 projects</ol>
-       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">02</span>     Core tools and functionality</ol>
-       <ol className="flex gap-8 border-b-2 border-muted-foreground"> <span className="font-silver text-muted-foreground italic ">03</span>     Static JPEG or PNG export</ol>
-             <div className="font-silver text-[90px] italic tracking-normal text-black mt-38">
-Free
-         </div>
-         <div className="absolute top-92 right-2  flex flex-col">
-          <button className="absoulte  hover:bg-white rounded-full  transition-colors duration-300 ease-in-out ">
-            <Link href="#" className="p-9 pt-2 pb-2 text-lg right-2  rounded-full text-black">
-              Sign up{" "}
-            </Link>
-          </button>
-          <h6 className="mb-6 text-black">No credits card required</h6>
-</div>
+        </Link>
+        <div className="flex justify-between items-center gap-2  m-10 p-4">
+          <div className="relative bg-[#C5C5C526] w-140 left-35 h-145 text-black p-8 font-normal not-italic text-[20px] leading-[58px]  rounded-lg tracking-[-0.03em] ">
+            <ol className="flex gap-8 border-b-2 border-[#d2d2d2] ">
+              {" "}
+              <span className="font-silver text-muted-foreground italic ">
+                01
+              </span>{" "}
+              Create up to 8 projects
+            </ol>
+            <ol className="flex gap-8 border-b-2 border-[#d2d2d2]">
+              {" "}
+              <span className="font-silver text-muted-foreground italic ">
+                02
+              </span>{" "}
+              Core tools and functionality
+            </ol>
+            <ol className="flex gap-8 border-b-2 border-[#d2d2d2]">
+              {" "}
+              <span className="font-silver text-muted-foreground italic ">
+                03
+              </span>{" "}
+              Static JPEG or PNG export
+            </ol>
+            <div className="font-silver text-[100px] italic tracking-normal text-black mt-62">
+              Free
+            </div>
+            <div className="absolute top-112 right-2  flex flex-col">
+              <button className="absoulte bg-white rounded-full   ">
+                <Link
+                  href="#"
+                  className="p-9 pt-2 pb-2 text-lg right-2  rounded-full text-black font-ibm-plex"
+                >
+                  Sign up{" "}
+                </Link>
+              </button>
+              <h6 className="mb-6 text-black">No credits card required</h6>
+            </div>
           </div>
-          <div>Paid</div>
+          <div className="flex justify-between items-center gap-4  m-28 p-4">
+            <div className="relative bg-primary  w-136  h-145 text-white rounded-lg p-8 font-normal not-italic text-[20px] leading-[58px] tracking-[-0.03em]">
+              <ol className="flex gap-8 border-b-2 border-[#d2d2d2] ">
+                {" "}
+                <span className="font-silver text-white  italic ">01</span>{" "}
+                Support the platform as a founder member
+              </ol>
+              <ol className="flex gap-8 border-b-2 border-[#d2d2d2]">
+                {" "}
+                <span className="font-silver text-white italic ">02</span>{" "}
+                Manage unlimited boards and projects
+              </ol>
+              
+              <ol className="flex gap-8 border-b-2 border-[#d2d2d2]">
+                {" "}
+                <span className="font-silver text-white italic ">03</span> All
+                core tools and functionality
+              </ol>
+              <ol className="flex gap-8 border-b-2 border-[#d2d2d2]">
+                {" "}
+                <span className="font-silver text-white italic ">04</span> All
+              Export editable boards for Figma
+              </ol>
+              <div className="font-silver text-[100px] italic tracking-normal  mt-48">
+                Paid
+              </div>
+              <div className="absolute top-112 right-2  flex flex-col">
+                <button className="absoulte bg-white rounded-full   ">
+                  <Link
+                    href="#"
+                    className="p-9 pt-2 pb-2 text-lg right-2  rounded-full text-black font-ibm-plex"
+                  >
+                    Sign up{" "}
+                  </Link>
+                </button>
+                <h6 className="mb-6 font-inter">$5 / month or $35 / year</h6>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div>
+        <h1 className="flex justify-center items-center font-silver text-primary    text-3xl">View samples and tutorials on <Link href="#" className="italic gap-3 border border-b-primary/50   p-6 "> Instagram </Link> </h1>
+
+        </div>
+       </div>
       {/* Fotoor */}
-      <div className="relative top-8 left-5 w-full h-80 p-20 bg-black flex items-center justify-center">
+      <div className="relative top-8      w-full h-full p-20  pt-4 pb-4  my-18  pl-2 pr-2 bg-black flex items-center justify-center overflow-hidden">
         <Image
           src="/Footer.png"
           alt="Footer"
           width={1314}
-          height={276}
-          className="pb-6  "
+          height={200}
+          className="pb-16  p-20 "
         />
-        <div className="absolute bottom-5 left-20 flex items-center gap-4 text-muted-foreground text-sm">
+        <div className="absolute bottom-4 left-45 flex items-center gap-4 text-muted-foreground text-sm mt-35">
           <Link href="#" className="">
             {" "}
             Terms of Use
@@ -366,7 +429,7 @@ Free
           </Link>
         </div>
         <div>
-          <div className="absolute bottom-5 right-20 text-muted-foreground text-sm">
+          <div className="absolute bottom-5 right-45 text-muted-foreground text-sm">
             Copyright © Ward Studio Ltd 2025
           </div>
         </div>
